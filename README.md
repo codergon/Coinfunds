@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CoinFunds
 
-## Getting Started
+Powered by `Circle`
+Coin Funds is a web app that provides the following sercives
 
-First, run the development server:
+1. Allow users to create campaigns for other users to donate to.
+2. Users can decide to donate via crypto or via card details. Users can donate anonymously via crypto while to donate via card details, they must have registered the card to their account.
+3. Users can decide to withdraw their donation to a particular campaign as long as the campaign has not been paid out.
+4. Users receive notifications on event changes in their campaign info.
+5. Users can link a blockchain address to their account in which they can use to receive payouts of their several campaigns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Check backend folder for API routing endpoints and frontend folder for website frontend.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# FEATURES
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. All transactions are prepared by the backend and processed by CIRCLE.
+2. A fee of 0.3% is charged on every donation refund and campaign payout.
+3. Campaign alert notifications are sent to mail.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# TODO
 
-## Learn More
+1. Implement card payment. The app only currently supports chain payments.
+2. Implement verification of campaigns.
+3. Identify means of scam campaigns.
 
-To learn more about Next.js, take a look at the following resources:
+## Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Working link at
