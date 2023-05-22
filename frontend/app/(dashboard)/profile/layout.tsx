@@ -1,10 +1,10 @@
 import Topbar from "@/components/shared/Topbar";
 
-interface Props {
+interface PageProps {
   children: React.ReactNode;
 }
 
-function Profile({ children }: Props) {
+function Profile({ children }: PageProps) {
   return (
     <div className="profile">
       <Topbar title="" />

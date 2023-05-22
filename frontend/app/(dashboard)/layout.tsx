@@ -1,11 +1,11 @@
 import Sidebar from "@/components/shared/Sidebar/Sidebar";
 import React, { Suspense } from "react";
 
-interface Props {
+interface PageProps {
   children: React.ReactNode;
 }
 
-function Dashboard({ children }: Props) {
+function Dashboard({ children }: PageProps) {
   return (
     <>
       <Suspense fallback="...">

@@ -1,10 +1,10 @@
 import Topbar from "@/components/shared/Topbar";
 
-interface Props {
+interface PageProps {
   children: React.ReactNode;
 }
 
-function layout({ children }: Props) {
+function layout({ children }: PageProps) {
   return (
     <div className="campaigns">
       <Topbar

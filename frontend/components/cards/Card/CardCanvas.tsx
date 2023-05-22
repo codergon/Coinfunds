@@ -15,7 +15,7 @@ const elHeight = 205;
 const distortionHeight = 0.8;
 const camera = new THREE.PerspectiveCamera(75, elWidth / elHeight, 0.1, 1000);
 
-interface Props {
+interface CardCanvasProps {
   hovered: boolean;
   colorsIndex: number;
 }
@@ -47,7 +47,7 @@ const CustomShaderMaterial = shaderMaterial(
 
 extend({ CustomShaderMaterial });
 
-const WavePlane = ({ hovered = false, colorsIndex }: Props) => {
+const WavePlane = ({ hovered = false, colorsIndex }: CardCanvasProps) => {
   const mesh = useRef<THREE.Mesh>(null);
 
   useFrame((state, delta) => {
@@ -80,7 +80,7 @@ const WavePlane = ({ hovered = false, colorsIndex }: Props) => {
   );
 };
 
-const CardCanvas = ({ hovered = false, colorsIndex }: Props) => {
+const CardCanvas = ({ hovered = false, colorsIndex }: CardCanvasProps) => {
   return (
     <>
       <Canvas dpr={[1, 2]} camera={camera} className="card-canvas">
