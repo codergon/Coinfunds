@@ -1,0 +1,58 @@
+$white: #ffffff;
+$black: #000010;
+
+$grey: #999;
+$dark: #1c1c1c;
+$dark-l: #222;
+$gray: #808080;
+$white: #ffffff;
+$dove-gray: #666;
+$light-gray: #a2a2a2;
+
+$overlay-bg: #f1f1ef;
+
+// $primary: #ac82fc;
+$primary: #6b46fe;
+$secondary: #cfdddb;
+
+$sidebar-w: 240px;
+$content-w: calc(100% - #{$sidebar-w});
+
+$navbar-w: 1110px;
+$hor-padding: 40px;
+$border-1: 1px solid #e2e2e2;
+$border-2: 1px solid #e4e4e4;
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-custom: cubic-bezier(0.33, 0, 0.67, 1);
+$ease-menu: cubic-bezier(0.63, 0, 0.4, 0.99);
+$ease-hero-marquee: cubic-bezier(0.24, 0.6, 0.25, 1);
+
+// fonts
+$font-sans: "DMSans", sans-serif;
+
+// Z-indexes
+$z-indexes: (
+  "noscript",
+  "preloader",
+  "transition",
+  "modal",
+  "overlay",
+  "nav",
+  "topbar",
+  "canvas",
+  "menu",
+  "content"
+);
+
+:export {
+  gray: $gray;
+  dark: $dark;
+  white: $white;
+  black: $black;
+  primary: $primary;
+  doveGray: $dove-gray;
+  secondary: $secondary;
+  contentWidth: $content-w;
+  sidebarWidth: $sidebar-w;
+}

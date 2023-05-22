@@ -1,0 +1,107 @@
+.c-topbar {
+  display: flex;
+  flex-direction: column;
+
+  &-action-btns {
+    width: 100%;
+    @extend %row-spaced-center;
+    padding: 32px $hor-padding 0px;
+  }
+
+  &-heading {
+    width: 100%;
+    @extend %row-spaced;
+    padding: 128px $hor-padding 0px;
+  }
+
+  &-filters-container {
+    @extend %row-spaced;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    margin-top: 30px;
+    position: sticky;
+    background: $white;
+    z-index: z("topbar");
+    border-bottom: $border-1;
+    padding: 30px $hor-padding 30px;
+  }
+
+  &-filters {
+    @extend %row-center;
+    gap: 20px;
+    flex-wrap: wrap;
+    &-btn {
+      @extend %row-center;
+      height: 40px;
+      border: none;
+      color: $gray;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 0px 10px;
+      border: $border-1;
+      border-radius: 40px;
+      $spanPadding: 10px;
+      .label {
+        color: $dark;
+        border-right: $border-1;
+        padding-right: $spanPadding;
+      }
+      .value {
+        padding-left: $spanPadding;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-size: 66px;
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    color: $gray;
+    max-width: 380px;
+  }
+
+  &__actions {
+    @extend %row-center;
+    gap: 20px;
+    margin-left: 20px;
+
+    &__button {
+      @extend %row-center;
+      gap: 40px;
+      height: 40px;
+      border: none;
+      color: $gray;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 0px 20px;
+      border-radius: 0px;
+      border: $border-1;
+
+      &-dark {
+        color: $white;
+        border: none;
+        background-color: $dark;
+      }
+    }
+  }
+
+  &-heading:not(.campaign) {
+    gap: 16px;
+    padding-bottom: 32px;
+    flex-direction: column;
+    border-bottom: $border-1;
+  }
+  &__subtitle:not(.campaign) {
+    padding-left: 6px;
+    max-width: max-content;
+    max-width: 480px;
+  }
+}

@@ -1,0 +1,61 @@
+.profile {
+  flex: 1;
+  width: $content-w;
+  position: relative;
+  $hor-padding: 40px;
+
+  &__content {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0px $hor-padding 20px;
+
+    .user-details {
+      display: flex;
+      font-size: 15px;
+      max-width: 800px;
+      padding-top: 30px;
+      flex-direction: column;
+
+      &__header {
+        @extend %row-center;
+        margin-bottom: 24px;
+        h1 {
+          color: $dark;
+          font-size: 34px;
+          font-weight: 700;
+        }
+      }
+
+      &__row {
+        @extend %row-spaced-center;
+
+        height: 50px;
+        font-weight: 500;
+        border-bottom: $border-1;
+        .label {
+          color: $gray;
+        }
+        .value {
+          color: $dark;
+          width: 46%;
+          span {
+            color: $gray;
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      &__actions {
+        @extend %row-center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+    }
+  }
+}

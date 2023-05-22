@@ -1,0 +1,39 @@
+.searchbar {
+  @extend %row-center;
+  flex: 1;
+  gap: 10px;
+  max-width: 510px;
+  overflow: hidden;
+  padding: 4px 15px;
+  padding-left: 4px;
+  border-radius: 12px;
+  border: $border-2;
+
+  input {
+    flex: 1;
+    height: 28px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    &:active,
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 28px;
+    @extend %row-middle;
+    background: rgba($color: $dark, $alpha: 0.07);
+    svg {
+      fill: $gray;
+      width: 15px;
+      height: 15px;
+      stroke: $gray;
+      stroke-width: 0.3px;
+    }
+  }
+}

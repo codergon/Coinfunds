@@ -1,6 +1,5 @@
-import { Suspense } from "react";
-import Donations from "./(dashboard)/donations/layout";
 import Sidebar from "@/components/shared/Sidebar/Sidebar";
+import React, { Suspense } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -12,7 +11,7 @@ function Dashboard({ children }: Props) {
       <Suspense fallback="...">
         <Sidebar />
       </Suspense>
-      <Donations />
+      {children}
     </>
   );
 }

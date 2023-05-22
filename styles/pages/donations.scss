@@ -1,0 +1,15 @@
+.donations {
+  flex: 1;
+  width: $content-w;
+  position: relative;
+  $hor-padding: 40px;
+
+  &__content {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 50px $hor-padding 20px;
+  }
+}

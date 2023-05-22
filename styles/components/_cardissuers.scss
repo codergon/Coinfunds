@@ -1,0 +1,23 @@
+.mastercard {
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  $circle-size: 30px;
+
+  .circle {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    width: $circle-size;
+    height: $circle-size;
+  }
+  .orange {
+    background: #f89e1c;
+  }
+  .red {
+    z-index: 2;
+    background: #eb001b90;
+    transform: translateX(30%);
+  }
+}

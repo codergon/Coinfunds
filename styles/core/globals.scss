@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #000;
+  --foreground: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #000;
+    --foreground: #fff;
+  }
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  color: var(--primary);
+  background: var(--foreground);
+}
+
+main {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+
+input {
+  background: transparent;
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+}
+
+ul,
+li {
+  display: flex;
+}
