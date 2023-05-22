@@ -4,12 +4,12 @@ import Searchbar from "./Searchbar";
 import { CalendarBlank } from "phosphor-react";
 import variables from "@/styles/core/variables.module.scss";
 
-interface Props {
+interface TopbarProps {
   title?: string;
   subtitle?: string;
   isCampaign?: boolean;
 }
-function Topbar({ title, subtitle, isCampaign = false }: Props) {
+function Topbar({ title, subtitle, isCampaign = false }: TopbarProps) {
   return (
     <>
       <div className="c-topbar">

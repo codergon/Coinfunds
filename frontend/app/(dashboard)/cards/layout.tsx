@@ -3,11 +3,11 @@
 import Topbar from "@/components/shared/Topbar";
 import { Plus } from "phosphor-react";
 
-interface Props {
+interface PageProps {
   children: React.ReactNode;
 }
 
-function layout({ children }: Props) {
+function layout({ children }: PageProps) {
   return (
     <div className="cards">
       <Topbar

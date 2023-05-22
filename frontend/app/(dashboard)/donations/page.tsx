@@ -1,6 +1,5 @@
 "use client";
 
-import dayjs from "dayjs";
 import millify from "millify";
 import Image from "next/image";
 import TimeAgo from "react-time-ago";
@@ -12,11 +11,11 @@ import { useEffect, useState } from "react";
 
 TimeAgoy.addDefaultLocale(en);
 
-interface Props {
+interface PageProps {
   children?: React.ReactNode;
 }
 
-function DonationsTable({}: Props) {
+function DonationsTable({}: PageProps) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
