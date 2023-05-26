@@ -1,17 +1,15 @@
 import DonationsTable from "./page";
 import Topbar from "@/components/shared/Topbar";
 
-interface PageProps {
+interface DonationsPageProps {
   children?: React.ReactNode;
 }
 
-function Donations({ children }: PageProps) {
+function Donations({ children }: DonationsPageProps) {
   return (
     <div className="donations">
       <Topbar />
-      <div className="donations__content">
-        <DonationsTable />
-      </div>
+      <div className="donations__content">{children}</div>
     </div>
   );
 }

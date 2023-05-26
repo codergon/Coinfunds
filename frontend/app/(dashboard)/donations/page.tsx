@@ -8,14 +8,11 @@ import { ArrowsVertical, CreditCard } from "phosphor-react";
 import TimeAgoy from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
 import { useEffect, useState } from "react";
+import { AppProps } from "next/app";
 
 TimeAgoy.addDefaultLocale(en);
 
-interface PageProps {
-  children?: React.ReactNode;
-}
-
-function DonationsTable({}: PageProps) {
+function Page() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -161,4 +158,4 @@ function DonationsTable({}: PageProps) {
   );
 }
 
-export default DonationsTable;
+export default Page;

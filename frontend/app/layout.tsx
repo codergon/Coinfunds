@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import "@/styles/index.scss";
 import { Metadata } from "next";
-import { Suspense } from "react";
 import { roobert } from "@/styles/font";
-import Sidebar from "@/components/shared/Sidebar/Sidebar";
+
+import "@/utils/axios";
 
 import duration from "dayjs/plugin/duration";
 import isBetween from "dayjs/plugin/isBetween";

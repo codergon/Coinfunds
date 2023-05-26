@@ -4,87 +4,46 @@ import Icons from "../Icons";
 import Link from "next/link";
 import Image from "next/image";
 import ActiveLink from "../ActiveLink";
-import {
-  User,
-  Ticket,
-  CreditCard,
-  FadersHorizontal,
-  Megaphone,
-  MapTrifold,
-  BellSimple,
-  Bell,
-  UserCircle,
-  ArrowUpRight,
-  GithubLogo,
-} from "phosphor-react";
+import { CreditCard, Megaphone } from "phosphor-react";
+
+const sidebarLinks = [
+  {
+    name: "Campaigns",
+    link: "/",
+    altLink: "/campaigns",
+    icon: (
+      <Megaphone
+        size={20}
+        mirrored
+        weight="fill"
+        className="sidebar__menu-item-icon"
+      />
+    ),
+  },
+  {
+    name: "Cards",
+    link: "/cards",
+    icon: (
+      <CreditCard size={20} weight="fill" className="sidebar__menu-item-icon" />
+    ),
+  },
+  {
+    name: "Donations",
+    link: "/donations",
+    icon: <Icons.HandCoins size={20} className="sidebar__menu-item-icon" />,
+  },
+];
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="sidebar__logo">
-        <h1>Coinfunds</h1>
-      </div>
+      <Link href="/" className="sidebar__logo">
+        <Icons.AppLogo />
+      </Link>
 
       <div className="sidebar__menu">
         <ul>
-          {[
-            {
-              name: "Donations",
-              link: "/",
-              altLink: "/donations",
-              icon: (
-                <Icons.HandCoins
-                  size={20}
-                  className="sidebar__menu-item-icon"
-                />
-              ),
-            },
-            {
-              name: "Campaigns",
-              link: "/campaigns",
-              icon: (
-                <Megaphone
-                  size={20}
-                  mirrored
-                  weight="fill"
-                  className="sidebar__menu-item-icon"
-                />
-              ),
-            },
-            {
-              name: "Cards",
-              link: "/cards",
-              icon: (
-                <CreditCard
-                  size={20}
-                  weight="fill"
-                  className="sidebar__menu-item-icon"
-                />
-              ),
-            },
-            // {
-            //   name: "Profile",
-            //   link: "/profile",
-            //   icon: (
-            //     <UserCircle
-            //       size={20}
-            //       weight="fill"
-            //       className="sidebar__menu-item-icon"
-            //     />
-            //   ),
-            // },
-            {
-              name: "Updates",
-              link: "/updates",
-              icon: (
-                <Bell
-                  size={19}
-                  weight="fill"
-                  className="sidebar__menu-item-icon"
-                />
-              ),
-            },
-          ].map((item, index) => {
+          {sidebarLinks.map((item, index) => {
             return (
               <li key={index}>
                 <ActiveLink

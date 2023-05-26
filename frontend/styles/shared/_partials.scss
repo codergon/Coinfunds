@@ -24,6 +24,15 @@
   justify-content: center;
 }
 
+%title-12 {
+  font-size: 12px;
+  font-weight: 500;
+  color: $dark;
+  @include phone {
+    font-size: 10px;
+  }
+}
+
 // FLEXDIRECTION -> COLUMN
 %column-center {
   display: flex;

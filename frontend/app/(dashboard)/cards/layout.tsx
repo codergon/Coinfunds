@@ -1,13 +1,13 @@
 "use client";
 
-import Topbar from "@/components/shared/Topbar";
 import { Plus } from "phosphor-react";
+import Topbar from "@/components/shared/Topbar";
 
-interface PageProps {
+type CardsPageProps = {
   children: React.ReactNode;
-}
+};
 
-function layout({ children }: PageProps) {
+function CardsPageLayout({ children }: CardsPageProps) {
   return (
     <div className="cards">
       <Topbar
@@ -29,4 +29,4 @@ function layout({ children }: PageProps) {
   );
 }
 
-export default layout;
+export default CardsPageLayout;

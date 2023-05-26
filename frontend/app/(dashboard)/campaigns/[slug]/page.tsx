@@ -24,24 +24,31 @@ function Page() {
           </h3>
           <div className="campaign__content__details-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
-              deleniti sunt explicabo molestiae, quisquam eveniet totam minima
-              sit pariatur. Ex molestiae a dolores enim quis velit deleniti
-              numquam excepturi expedita? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Excepturi perferendis velit ut? Quia, dicta
-              veniam nemo ea esse qui ullam deserunt sed illum rerum. Mollitia
-              unde suscipit debitis, dignissimos maxime adipisci quo veritatis
-              ut hic nemo similique magnam quasi reiciendis ullam sit sint ex
-              cum sed asperiores dolorum recusandae sequi et quae. Repellendus,
+              Join us in making a significant impact on economic equality and
+              uplifting marginalized communities by supporting The National
+              Black Bank Foundation. This crowdfunding campaign aims to provide
+              crucial financial resources to empower Black-owned banks and
+              promote economic growth within the Black community. With a rich
+              history spanning decades, these institutions have played a pivotal
+              role in fostering economic independence and addressing systemic
+              disparities. Your contribution will directly support initiatives
+              that amplify Black voices, encourage entrepreneurship, and build
+              generational wealth, ultimately creating a more inclusive and
+              equitable financial landscape.
             </p>
             <p>
-              adipisci, consectetur, consequatur laborum corporis. Mollitia
-              voluptates quis ipsum quidem dolorum blanditiis a quasi dolores,
-              cumque at voluptatem ratione id porro aliquam? Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quidem dolorum doloribus
-              tempore quod reiciendis dolor consectetur consequatur illo
-              voluptatem. Vero expedita suscipit repellendus soluta veniam quae
-              atque debitis minus voluptatum.
+              By donating to The National Black Bank Foundation, you are
+              investing in the long-term prosperity of Black-owned businesses
+              and individuals. Your support will enable the foundation to fund
+              programs that provide capital, financial education, and mentorship
+              to entrepreneurs and underserved communities. Through these
+              initiatives, Black-owned banks can expand their lending capacity,
+              offer affordable financial services, and promote homeownership,
+              ultimately driving economic advancement and breaking the cycle of
+              poverty. Together, we can dismantle barriers and foster a future
+              where economic empowerment is a reality for all. Join us today in
+              supporting The National Black Bank Foundation and become a
+              catalyst for change.
             </p>
           </div>
         </div>
@@ -87,7 +94,26 @@ function Page() {
         </div>
 
         <div className="campaign__sidebar-donations">
-          {[1, 2, 3, 4].map((item, index) => {
+          {[
+            {
+              name: "Linda Johnson",
+              amount: "$100",
+              date: "6h ago",
+              image: "https://i.pravatar.cc/50",
+            },
+            {
+              name: "Randy Fisher",
+              amount: "$89",
+              date: "1d ago",
+              image: "https://i.pravatar.cc/50",
+            },
+            {
+              name: "Donbaki Johnson",
+              amount: "$100",
+              date: "2d ago",
+              image: "https://i.pravatar.cc/50",
+            },
+          ].map((item, index) => {
             return (
               <div key={index} className="campaign__sidebar-donations-item">
                 <div className="campaign__sidebar-donations-item__image">
@@ -95,15 +121,15 @@ function Page() {
                     width={800}
                     height={400}
                     alt="campiagn image"
-                    src="https://i.pravatar.cc/300"
+                    src={item.image + "?img=" + (index + 1)}
                   />
                 </div>
 
                 <div className="campaign__sidebar-donations-item__details">
-                  <p className="donator">Donbaki Johnson</p>
+                  <p className="donator">{item.name}</p>
                   <div className="campaign__sidebar-donations-item__details-info">
-                    <p className="amount">{"$100"}</p>
-                    <p className="date">25d ago</p>
+                    <p className="amount">{item.amount}</p>
+                    <p className="date">{item.date}</p>
                   </div>
                 </div>
               </div>

@@ -25,18 +25,12 @@ const ActiveLink = ({
       location.href
     ).pathname;
 
-    // If altLink is provided, use it instead of props.as or props.href
-    const altLinkPathname = altLink
-      ? new URL(altLink, location.href).pathname
-      : null;
-
     // Using URL().pathname to get rid of query and hash
     const activePathname = new URL(pathname, location.href).pathname;
 
     const newClassName =
       linkPathname?.split("/")[1] === activePathname?.split("/")[1] ||
-      // altLinkPathname?.split("/")[1] === activePathname?.split("/")[1]
-      false
+      (altLink && location.pathname.startsWith(altLink))
         ? `${className} ${activeClassName}`.trim()
         : className;
 

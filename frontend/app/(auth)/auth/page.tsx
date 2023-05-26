@@ -3,21 +3,60 @@
 import { Eye, EyeSlash, Plus } from "phosphor-react";
 import { useState } from "react";
 
+import axios from "axios";
+
+import * as EmailValidator from "email-validator";
+
 function Page() {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [islogin, setIslogin] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [togglePass, setTogglePass] = useState(false);
 
-  const [islogin, setIslogin] = useState(true);
-
-  const [error, setError] = useState("");
-
   const handleSubmit = async () => {
-    if (islogin) {
-      // login
-    } else {
-      // register
+    if (!EmailValidator.validate(email)) {
+      setError("Invalid email");
+      return;
+    }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+    if (!islogin && username.length < 3) {
+      setError("Username must be at least 3 characters");
+      return;
+    }
+    setError("");
+    setLoading(true);
+
+    try {
+      if (islogin) {
+        const res = await axios.post("https://coin-funds.fly.dev/auth/login", {
+          email: "olayinkaganiyu1@gmail.com",
+          password: "whatever3",
+        });
+
+        console.log(res);
+      } else {
+        const res = await axios.post(
+          "https://coin-funds.fly.dev/auth/register",
+          {
+            email,
+            username,
+            password,
+          }
+        );
+
+        console.log(res);
+      }
+    } catch (error) {
+      //  @ts-ignore
+      setError(error.response.data.message);
+    } finally {
+      setLoading(false);
     }
   };
 

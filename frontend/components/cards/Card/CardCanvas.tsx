@@ -28,8 +28,8 @@ const colors = [
 ];
 
 function getColor(currentNumber: number) {
-  const nextIndex = currentNumber % colors?.length;
-  const nextItemIndex = nextIndex <= colors?.length ? nextIndex : 0;
+  const nextIndex = currentNumber % 4;
+  const nextItemIndex = nextIndex <= 4 ? nextIndex : 0;
   return colors[nextItemIndex];
 }
 

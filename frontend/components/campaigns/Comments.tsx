@@ -7,8 +7,25 @@ function Comments() {
         <h3>Supportive Sentiments</h3>
       </div>
 
-      {[1, 2, 3].map((item, index) => {
-        return <Comment key={index} />;
+      {[
+        {
+          name: "Linda Johnson",
+          date: "6h",
+          message:
+            "I'm so happy to be able to help and I hope you reach your goal!",
+        },
+        {
+          name: "Randy Fisher",
+          date: "1d",
+          message: "It's not much, but I hope it helps!",
+        },
+        {
+          name: "Donbaki Johnson",
+          date: "2d",
+          message: "We're all in this together!",
+        },
+      ].map((item, index) => {
+        return <Comment key={index} comment={item} />;
       })}
     </div>
   );

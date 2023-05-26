@@ -1,10 +1,13 @@
+import { AppProps } from "next/app";
+import CampaignsPage from "./page";
 import Topbar from "@/components/shared/Topbar";
 
-interface PageProps {
-  children: React.ReactNode;
-}
+type PageProps = {
+  isComponent?: boolean;
+  children?: React.ReactNode;
+};
 
-function layout({ children }: PageProps) {
+function Campaigns({ children, isComponent }: PageProps) {
   return (
     <div className="campaigns">
       <Topbar
@@ -14,9 +17,11 @@ function layout({ children }: PageProps) {
             goes to the campaign owner and you can withdraw your donation at any
             time."
       />
-      <div className="campaigns__content">{children}</div>
+      <div className="campaigns__content">
+        {!isComponent ? children : <CampaignsPage />}
+      </div>
     </div>
   );
 }
 
-export default layout;
+export default Campaigns;
